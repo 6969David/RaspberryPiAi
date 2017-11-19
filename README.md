@@ -1,0 +1,2 @@
+# RaspberryPiAi
+issues with setup
