@@ -1,0 +1,24 @@
+Has anyone had this issuue
+Playing a test sound...
+aplay: set_params:1233: Sample format non available
+Available formats:
+- S32_LE
+Traceback (most recent call last):
+  File "/home/pi/AIY-voice-kit-python/checkpoints/check_audio.py", line 138, in <module>
+    main()
+  File "/home/pi/AIY-voice-kit-python/checkpoints/check_audio.py", line 133, in main
+    do_checks()
+  File "/home/pi/AIY-voice-kit-python/checkpoints/check_audio.py", line 117, in do_checks
+    if not check_speaker_works():
+  File "/home/pi/AIY-voice-kit-python/checkpoints/check_audio.py", line 78, in check_speaker_works
+    aiy.audio.play_wave(TEST_SOUND_PATH)
+  File "/home/pi/AIY-voice-kit-python/src/aiy/audio.py", line 102, in play_wave
+    player.play_wav(wave_file)
+  File "/home/pi/AIY-voice-kit-python/src/aiy/_drivers/_player.py", line 71, in play_wav
+    self.play_bytes(frames, wav.getframerate(), wav.getsampwidth())
+  File "/home/pi/AIY-voice-kit-python/src/aiy/_drivers/_player.py", line 52, in play_bytes
+    aplay.stdin.write(audio_bytes)
+BrokenPipeError: [Errno 32] Broken pipe
+Press Enter to close...
+
+I was trying to run the audio test and wondered if anyone else had this issue
